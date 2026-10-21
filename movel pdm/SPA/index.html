@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha loja</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+        <span class="navbar-brand" onclick="navegar('tela-home')">Minha loja</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><button class="nav-link" onclick="navegar('tela-vestuario')">Vestuário</button></li>
+          <li class="nav-item"><button class="nav-link" onclick="navegar('tela-eletronicos')">Eletrônicos</button></li>
+          <li class="nav-item"><button class="nav-link" onclick="navegar('tela-contato')">Contato</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="container py-4 mt-5">
+    
+    <h1 class="text-center mb-4">Loja Mão na massa SPA</h1>
+
+    <div id="tela-home" class="tela row-cols-1 row-cols-md-3 g-4 show">
+      
+
+      <span class="card h-100" onclick="mostrarDetalhes('camiseta','imagens/camiseta.jpg','vestuário','40,00','Uma camiseta de qualidade', 5.0, 100)"
+      style="cursor: pointer;">
+        <img src="imagens/camiseta.jpg" class="card-img-top p-3" style="height:250px; object-fit:contain;">
+        <div class="card-body">
+          <h5 class="card-title">Camiseta</h5>
+          <p class="card-text">R$ 40,00</p>
+          
+        </div>+
+      </span>
+
+      <span class="card h-100" onclick="mostrarDetalhes('calca','imagens/calca.jpg','vestuário','150,00','Uma calça de qualidade', 5.0, 100)"
+      style="cursor: pointer;">
+        <img src="imagens/calca.jpg" class="card-img-top p-3" style="height:250px; object-fit:contain;">
+        <div class="card-body">
+          <h5 class="card-title">Calça</h5>
+          <p class="card-text">R$ 150,00</p>
+        </div>
+      </span>
+
+      <span class="card h-100" onclick="mostrarDetalhes('Telefone', 'imagens/telefone.jpg', 'Eletrônico',  '2199,00', 'Um celular de qualidade', 5.0, 100)"
+      style="cursor: pointer;">
+        <img src="imagens/telefone.jpg" class="card-img-top p-3" style="height:250px; object-fit:contain;">
+        <div  class="card-body">
+          <h5 class="card-title">Telefone</h5>
+          <p class="card-text">R$ 2199,00</p>
+        </div>
+      </span>
+
+      <span class="card h-100" onclick="mostrarDetalhes('Teclado', 'imagens/teclado.jpg', 'Eletrônico',  '80,00', 'Um teclado de qualidade', 5.0, 100)"
+      style="cursor: pointer;">
+        <img src="imagens/teclado.jpg" class="card-img-top p-3" style="height:250px; object-fit:contain;">
+        <div class="card-body">
+          <h5 class="card-title">Teclado</h5>
+          <p class="card-text">R$ 80,00</p>
+        </div>
+      </span>
+    </div>
+    
+    <div id="tela-vestuario" class="tela row-cols-1 row-cols-md-3 g-4 collapse">
+      
+
+      <span class="card h-100" onclick="mostrarDetalhes('camiseta','imagens/camiseta.jpg','vestuário','40,00','Uma camiseta de qualidade',5.0,100)"
+      style="cursor: pointer;">
+        <img src="imagens/camiseta.jpg" class="card-img-top p-3" style="height:250px; object-fit:contain;">
+        <div class="card-body">
+          <h5 class="card-title">Camiseta</h5>
+          <p class="card-text">R$ 40,00</p>
+        </div>
+      </span>
+
+      <span class="card h-100" onclick="mostrarDetalhes('calca','imagens/calca.jpg','vestuário','150,00','Uma calça de qualidade',5.0,100)"
+      style="cursor: pointer;">
+        <img src="imagens/calca.jpg" class="card-img-top p-3" style="height:250px; object-fit:contain;">
+        <div class="card-body">
+          <h5 class="card-title">Calça</h5>
+          <p class="card-text">R$ 150,00</p>
+        </div>
+      </span>
+    </div>
+    
+    <div id="tela-eletronicos" class="tela row-cols-1 row-cols-md-3 g-4 collapse">
+      
+      
+      <span class="card h-100" onclick="mostrarDetalhes('Telefone', 'imagens/telefone.jpg', 'Eletrônico',  '2199,00', 'Um celular de qualidade', 5.0, 100)"
+      style="cursor: pointer;">
+        <img src="imagens/telefone.jpg" class="card-img-top p-3" style="height:250px; object-fit:contain;">
+        <div class="card-body">
+          <h5 class="card-title">Telefone</h5>
+          <p class="card-text">R$ 2199,00</p>
+        </div>
+      </span>
+
+      <div class="card h-100" onclick="mostrarDetalhes('Teclado', 'imagens/teclado.jpg', 'Eletrônico',  '80,00', 'Um teclado de qualidade', 5.0, 100)"
+      style="cursor: pointer;">
+        <img src="imagens/teclado.jpg" class="card-img-top p-3" style="height:250px; object-fit:contain;">
+        <div class="card-body">
+          <h5 class="card-title">Teclado</h5>
+          <p class="card-text">R$ 80,00</p>
+        </div>
+      </div>
+    </div>
+    
+    <div id="tela-contato" class="tela row-cols-1 row-cols-md-3 g-4 collapse">
+      CONT
+
+      <div class="card shadow p-4">
+        <h2>Fale Conosco</h2>
+        <p><strong>Endereço:</strong> Rua Exemplo, 123 - Jardim Botanico</p>
+        <p><strong>Cidade:</strong> São josé - SC</p>
+        <p><strong>Telefone:</strong> (48) 98400-0000</p>
+        <p><strong>Email:</strong> contato@minhaloja.com</p>
+        
+        <span class="btn btn-secondary mt-3" onclick="voltar()">← Voltar</span>
+      </div>
+    </div>
+
+    <div id="tela-produto" class="tela collapse" >
+      <button class="btn btn-secondary mb-3" onclick="voltar()">← Voltar</button>
+      <div id="detalhes-produto" class="card shadow p-3">
+        
+      </div>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
